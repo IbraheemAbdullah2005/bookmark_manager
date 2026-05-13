@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In -Bookmark Manager</title>
+    <link href="../css/index.css" rel="stylesheet" />
+    <link href="../css/register.css" rel="stylesheet" />
+    <link href="../img/Logo.svg" rel="icon" />
+  </head>
+  <body class="no-scrollbar">
+    <div class="overflow-wrapper">
+      <main class="container">
+        <a class="header-logo" href="/Bookmark_Manager">
+          <img src="../img/Logo.svg" />
+          <h1>
+            BookMark<span class="line-break"></span> Manager<span
+              class="small-text"
+              >.io</span
+            >
+          </h1>
+        </a>
+        <div class="data-container">
+          <div class="center">
+            <h2>Sign In</h2>
+            <p class="data-desc">Welcome back</p>
+          </div>
+          <form id="loginForm">
+            <div class="input-fields">
+              <div class="input">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                />
+                <p id="error-email" class="error-text hidden">Invalid email.</p>
+              </div>
+              <div class="input">
+                <label for="pass">Password</label>
+                <input
+                  type="password"
+                  id="pass"
+                  name="password"
+                  placeholder="Enter your password"
+                  required
+                />
+                <p id="error-password" class="error-text hidden">
+                  Invalid password.
+                </p>
+              </div>
+            </div>
+            <button type="submit">Sign In</button>
+          </form>
+          <div class="other-method">
+            <p>Don't have an account?</p>
+            <a href="./signup.html">Sign Up</a>
+          </div>
+        </div>
+        <a href="/Bookmark_Manager" class="go-back">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-move-left-icon lucide-move-left"
+          >
+            <path d="M6 8L2 12L6 16" />
+            <path d="M2 12H22" />
+          </svg>
+          <span>BookMarkManager.io</span>
+        </a>
+      </main>
+    </div>
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const email = document.getElementById("email").value;
+          const pass = document.getElementById("pass").value;
+          const errorEmail = document.getElementById("error-email");
+          const errorPassword = document.getElementById("error-password");
+
+          const formData = new FormData();
+          formData.append("email", email);
+          formData.append("password", pass);
+
+          fetch("../php/login.php", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.text())
+            .then((data) => {
+              if (data.trim() === "success") {
+                window.location.href = "../html/events.html";
+              } else if (data.trim() === "noUserFound") {
+                errorEmail.classList.remove("hidden");
+              } else if (data.trim() === "invalidPassword") {
+                errorPassword.classList.remove("hidden");
+              } else {
+                window.location.href = "../html/notFound.html";
+              }
+            });
+        });
+    </script>
+  </body>
+</html>

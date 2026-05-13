@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark Manager</title>
+    <link href="./css/index.css" rel="stylesheet" />
+    <link href="./css/home.css" rel="stylesheet" />
+    <link href="./img/Logo.svg" rel="icon" />
+  </head>
+  <body class="no-scrollbar">
+    <div class="overflow-wrapper">
+      <div class="back"></div>
+      <header>
+        <a href="/Bookmark_Manager" class="logo">
+          <img src="./img/Logo.svg" alt="Website Logo" />
+        </a>
+        <a href="./html/signin.html" class="btn-trans"> Sign In </a>
+      </header>
+      <main>
+        <section class="hero">
+          <div class="hero-header">
+            <h1><span>Standalone</span> Bookmark Manager</h1>
+            <p class="hero-header-desc">Find your links Cross-platform Fast</p>
+            <div class="hero-btn">
+              <a href="./html/signup.html" class="btn primary-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-fishing-hook-icon lucide-fishing-hook"
+                >
+                  <path
+                    d="m17.586 11.414-5.93 5.93a1 1 0 0 1-8-8l3.137-3.137a.707.707 0 0 1 1.207.5V10"
+                  />
+                  <path d="M20.414 8.586 22 7" />
+                  <circle cx="19" cy="10" r="2" />
+                </svg>
+                <span>Start now</span>
+              </a>
+              <button class="btn secondary-btn show-modal">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-play-icon lucide-play"
+                >
+                  <path
+                    d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"
+                  />
+                </svg>
+                <span>Watch intro</span>
+              </button>
+              <a href="./html/events.html" class="btn secondary-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-mouse-pointer-click-icon lucide-mouse-pointer-click"
+                >
+                  <path d="M14 4.1 12 6" />
+                  <path d="m5.1 8-2.9-.8" />
+                  <path d="m6 12-1.9 2" />
+                  <path d="M7.2 2.2 8 5.1" />
+                  <path
+                    d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z"
+                  />
+                </svg>
+                <span>Try demo</span>
+              </a>
+            </div>
+            <div class="hero-trust">
+              <div class="testers">
+                <img src="./img/Logo4.svg" />
+                <img src="./img/Logo3.svg" />
+                <img src="./img/Logo2.svg" />
+                <img src="./img/Logo1.svg" />
+              </div>
+              <div class="hero-star">
+                <div class="stars">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-star-icon lucide-star"
+                  >
+                    <path
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-star-icon lucide-star"
+                  >
+                    <path
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-star-icon lucide-star"
+                  >
+                    <path
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-star-icon lucide-star"
+                  >
+                    <path
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-star-icon lucide-star"
+                  >
+                    <path
+                      d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+                    />
+                  </svg>
+                </div>
+                <p>Trusted by 0+ professionals</p>
+              </div>
+            </div>
+          </div>
+          <div class="hero-img">
+            <img src="./img/Screenshot.png" alt="Screenshot" />
+          </div>
+        </section>
+        <section class="features">
+          <div class="features-header">
+            <h2 class="features-primary-header">Features</h2>
+            <h3 class="features-secondary-header">Everything you need</h3>
+            <p class="features-desc">Simple, Powerful, Beautiful</p>
+          </div>
+          <img class="features-img" src="./img/Octo.svg" alt="Octo" />
+          <div class="features-cards">
+            <div class="features-card">
+              <div class="features-card-headers">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-tags-icon lucide-tags"
+                >
+                  <path
+                    d="M13.172 2a2 2 0 0 1 1.414.586l6.71 6.71a2.4 2.4 0 0 1 0 3.408l-4.592 4.592a2.4 2.4 0 0 1-3.408 0l-6.71-6.71A2 2 0 0 1 6 9.172V3a1 1 0 0 1 1-1z"
+                  />
+                  <path
+                    d="M2 7v6.172a2 2 0 0 0 .586 1.414l6.71 6.71a2.4 2.4 0 0 0 3.191.193"
+                  />
+                  <circle cx="10.5" cy="6.5" r=".5" fill="currentColor" />
+                </svg>
+                <h4>Tag chaining</h4>
+              </div>
+              <p>
+                No more folders and collections. Chain tags to find exactly what
+                you need.
+              </p>
+              <a href="./html/notFound.html">
+                <span>Learn more</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-chevron-right-icon lucide-chevron-right"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </a>
+            </div>
+            <div class="features-card">
+              <div class="features-card-headers">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-tablet-smartphone-icon lucide-tablet-smartphone"
+                >
+                  <rect width="10" height="14" x="3" y="8" rx="2" />
+                  <path
+                    d="M5 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2h-2.4"
+                  />
+                  <path d="M8 18h.01" />
+                </svg>
+                <h4>Cross-platform</h4>
+              </div>
+              <p>
+                Your bookmarks are accessible from any device with our web app,
+                browser extensions, and mobile apps.
+              </p>
+            </div>
+            <div class="features-card">
+              <div class="features-card-headers">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-grid2x2-plus-icon lucide-grid-2x2-plus"
+                >
+                  <path
+                    d="M12 3v17a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a1 1 0 0 1-1 1H3"
+                  />
+                  <path d="M16 19h6" />
+                  <path d="M19 22v-6" />
+                </svg>
+                <h4>Integration</h4>
+              </div>
+              <p>
+                Use our API to integrate Bookmark Manager with your favorite
+                apps and services.
+              </p>
+              <a href="./html/notFound.html">
+                <span>Learn more</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-chevron-right-icon lucide-chevron-right"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="features-p">
+            <p>Works with all major browsers and operating systems</p>
+            <div class="browsers">
+              <img src="./img/Chrome.svg" alt="Chrome" />
+              <img src="./img/Firefox.svg" alt="Firefox" />
+              <img src="./img/Safari.svg" alt="Safari" />
+              <img src="./img/Edge.svg" alt="Edge" />
+            </div>
+          </div>
+        </section>
+        <section class="pricing">
+          <div>
+            <h2 class="pricing-header">Pricing</h2>
+            <p class="pricing-desc">
+              Choose our paid plan to unlock all features
+            </p>
+          </div>
+          <div class="card-container">
+            <div class="card-secondary">
+              <div class="card-price">Free</div>
+              <div class="card-secondary-desc">
+                Try it out with the free plan. No time limit
+              </div>
+              <ul class="card-list">
+                <li class="card-list-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-check-icon lucide-check"
+                  >
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
+                  <span>20 Bookmarks</span>
+                </li>
+              </ul>
+              <a href="./html/signup.html" class="btn secondary-btn">
+                Start now
+              </a>
+            </div>
+            <div class="card-primary">
+              <p class="card-primary-header">Annual Subscription</p>
+              <div class="card-primary-price">
+                <span class="card-price">$29</span
+                ><span class="card-primary-sub">/year</span>
+              </div>
+              <ul class="card-list">
+                <li class="card-list-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-check-icon lucide-check"
+                  >
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
+                  <span>Unlimited Bookmarks</span>
+                </li>
+                <li class="card-list-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-check-icon lucide-check"
+                  >
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
+                  <span>Import & Export Bookmarks </span>
+                </li>
+                <li class="card-list-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-check-icon lucide-check"
+                  >
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
+                  <span>Webhook Notifications</span>
+                </li>
+                <li class="card-list-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-check-icon lucide-check"
+                  >
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
+                  <span>API Access</span>
+                </li>
+              </ul>
+              <a href="./html/signup.html" class="btn primary-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-fishing-hook-icon lucide-fishing-hook"
+                >
+                  <path
+                    d="m17.586 11.414-5.93 5.93a1 1 0 0 1-8-8l3.137-3.137a.707.707 0 0 1 1.207.5V10"
+                  />
+                  <path d="M20.414 8.586 22 7" />
+                  <circle cx="19" cy="10" r="2" />
+                </svg>
+                <span>Start now</span>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="cta">
+          <div class="cta-container">
+            <div class="cta-headers">
+              <h2 class="cta-header cta-primary-header">
+                Stop the Mess and Build
+              </h2>
+              <h3 class="cta-header cta-secondary-header">
+                Your Corner of the Internet
+              </h3>
+            </div>
+            <div class="cta-btn">
+              <a href="./html/signup.html" class="btn primary-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-fishing-hook-icon lucide-fishing-hook"
+                >
+                  <path
+                    d="m17.586 11.414-5.93 5.93a1 1 0 0 1-8-8l3.137-3.137a.707.707 0 0 1 1.207.5V10"
+                  />
+                  <path d="M20.414 8.586 22 7" />
+                  <circle cx="19" cy="10" r="2" />
+                </svg>
+                <span>Start now</span>
+              </a>
+              <button class="btn secondary-btn show-modal">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-play-icon lucide-play"
+                >
+                  <path
+                    d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"
+                  />
+                </svg>
+                <span>Watch intro</span>
+              </button>
+              <a href="./html/events.html" class="btn secondary-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-mouse-pointer-click-icon lucide-mouse-pointer-click"
+                >
+                  <path d="M14 4.1 12 6" />
+                  <path d="m5.1 8-2.9-.8" />
+                  <path d="m6 12-1.9 2" />
+                  <path d="M7.2 2.2 8 5.1" />
+                  <path
+                    d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z"
+                  />
+                </svg>
+                <span>Try demo</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div class="footer">
+          <a href="/Bookmark_Manager" class="logo">
+            <img src="./img/Logo.svg" alt="Website Logo" />
+          </a>
+          <div>
+            <h4>Support</h4>
+            <ul>
+              <li><a href="./html/notFound.html">Learn</a></li>
+              <li><a href="./html/notFound.html">Use Cases</a></li>
+              <li><a href="./html/notFound.html">Blog</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Apps & Extensions</h4>
+            <ul>
+              <li><a href="./html/notFound.html">Chrome</a></li>
+              <li><a href="./html/notFound.html">Edge</a></li>
+              <li><a href="./html/notFound.html">Firefox</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <ul>
+              <li><a href="./html/contact.html">Contact</a></li>
+              <li><a href="./html/notFound.html">Privacy</a></li>
+              <li><a href="./html/notFound.html">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="created-by">
+          &copy; All rights reserved, Created by Ibraheem Abdullah & Ahmad
+          Al-masri
+        </p>
+      </footer>
+      <div>
+        <div class="modal hidden">
+          <iframe
+            width="720"
+            height="405"
+            src="https://www.youtube.com/embed/fNEKjmIJf8k?si=zGRyoOnHxjVuT47t"
+            title="YouTube video player"
+            frameborder="0"
+            allow="
+              accelerometer;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="overlay hidden"></div>
+      </div>
+    </div>
+    <script>
+      const btnOpenModal = document.querySelector(".show-modal");
+      const modal = document.querySelector(".modal");
+      const overlay = document.querySelector(".overlay");
+
+      const openModal = function () {
+        modal.classList.remove("hidden");
+        overlay.classList.remove("hidden");
+      };
+
+      const closeModal = function () {
+        modal.classList.add("hidden");
+        overlay.classList.add("hidden");
+      };
+
+      btnOpenModal.addEventListener("click", openModal);
+
+      overlay.addEventListener("click", closeModal);
+    </script>
+  </body>
+</html>

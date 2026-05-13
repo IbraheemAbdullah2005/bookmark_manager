@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo - Bookmark Manager</title>
+    <link href="../css/index.css" rel="stylesheet" />
+    <link href="../css/events.css" rel="stylesheet" />
+    <link href="../img/Logo.svg" rel="icon" />
+  </head>
+  <body class="no-scrollbar">
+    <div class="overflow-wrapper">
+      <header>
+        <nav class="top-nav">
+          <div class="header-logo">
+            <a href="/Bookmark_Manager">
+              <img src="../img/Logo.svg" />
+            </a>
+            <h1>DEMO</h1>
+          </div>
+          <div class="header-search">
+            <div class="input-search">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-search-icon lucide-search"
+              >
+                <path d="m21 21-4.34-4.34" />
+                <circle cx="11" cy="11" r="8" />
+              </svg>
+              <input type="text" placeholder="Search" />
+            </div>
+            <button class="btn-search">+ New</button>
+          </div>
+          <div class="header-settings">
+            <button class="btn btn-trans show-modal" title="Settings">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-settings-icon lucide-settings"
+              >
+                <path
+                  d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"
+                />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </button>
+            <a
+              href="./notFound.html"
+              class="btn btn-trans"
+              title="Documentation"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-circle-question-mark-icon lucide-circle-question-mark"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                <path d="M12 17h.01" />
+              </svg>
+            </a>
+            <a href="../php/logout.php" class="btn btn-trans" title="Exit Demo">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-log-out-icon lucide-log-out"
+              >
+                <path d="m16 17 5-5-5-5" />
+                <path d="M21 12H9" />
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+              </svg>
+            </a>
+          </div>
+        </nav>
+        <nav class="bottom-nav">
+          <ul>
+            <li><button class="btn-tags">Tool</button></li>
+            <li><button class="btn-tags">Marketing</button></li>
+            <li><button class="btn-tags">Inspire</button></li>
+            <li><button class="btn-tags">Learn</button></li>
+            <li><button class="btn-tags">Web Dev</button></li>
+          </ul>
+          <div class="total-bookmarks">
+            <p><span id="totalBookmarks">0</span> bookmarks</p>
+            <button class="btn-menu">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-ellipsis-vertical-icon lucide-ellipsis-vertical"
+              >
+                <circle cx="12" cy="12" r="1" />
+                <circle cx="12" cy="5" r="1" />
+                <circle cx="12" cy="19" r="1" />
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <section class="flex-col tags-section">
+          <button class="btn-tag">
+            <span class="tag-text">AI</span><span class="tag-number">26</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Analyze</span
+            ><span class="tag-number">8</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Article</span
+            ><span class="tag-number">2</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Audio</span><span class="tag-number">5</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Automation</span
+            ><span class="tag-number">5</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Build</span
+            ><span class="tag-number">49</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Code</span><span class="tag-number">2</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Community</span
+            ><span class="tag-number">5</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Course</span
+            ><span class="tag-number">1</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Design</span
+            ><span class="tag-number">15</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Directory</span
+            ><span class="tag-number">6</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Docs</span><span class="tag-number">7</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Examples</span
+            ><span class="tag-number">8</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Game</span><span class="tag-number">2</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Health</span
+            ><span class="tag-number">3</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Inspire</span
+            ><span class="tag-number">26</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Interactive</span
+            ><span class="tag-number">4</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Investing</span
+            ><span class="tag-number">4</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Learn</span
+            ><span class="tag-number">30</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Library</span
+            ><span class="tag-number">2</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Marketing</span
+            ><span class="tag-number">13</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Mental Models</span
+            ><span class="tag-number">3</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">News</span><span class="tag-number">4</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Play</span><span class="tag-number">6</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Podcast</span
+            ><span class="tag-number">4</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Productivity</span
+            ><span class="tag-number">2</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Promote</span
+            ><span class="tag-number">14</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Research</span
+            ><span class="tag-number">7</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Science</span
+            ><span class="tag-number">8</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">SEO</span><span class="tag-number">5</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Startups</span
+            ><span class="tag-number">10</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Tool</span><span class="tag-number">59</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Trending</span
+            ><span class="tag-number">13</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Tutorial</span
+            ><span class="tag-number">4</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">video</span
+            ><span class="tag-number">10</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Web Dev</span
+            ><span class="tag-number">39</span>
+          </button>
+          <button class="btn-tag">
+            <span class="tag-text">Writing</span
+            ><span class="tag-number">3</span>
+          </button>
+        </section>
+        <section class="flex-col links-section"></section>
+        <section class="flex-col overview-section">
+          <div id="description" class="hidden">
+            <button id="close-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-x-icon lucide-x"
+              >
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+              </svg>
+            </button>
+            <span id="addContent"></span>
+          </div>
+        </section>
+      </main>
+      <div>
+        <div class="modal hidden">
+          <h2 class="new-header">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-square-pen-icon lucide-square-pen"
+            >
+              <path
+                d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+              />
+              <path
+                d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"
+              />
+            </svg>
+            <span>NEW BOOKMARK</span>
+          </h2>
+          <form class="flex-container">
+            <div id="inputs">
+              <label for="URL" id="URL-label">URL</label>
+              <input
+                type="url"
+                id="URL"
+                required
+                autofocus
+                placeholder="https://example.com"
+              />
+            </div>
+            <div class="flex-container-btn">
+              <button type="submit" id="next-btn">
+                <span>Next</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-chevron-right-icon lucide-chevron-right"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
+              <button type="reset" id="cancel-btn">Cancel</button>
+            </div>
+          </form>
+        </div>
+        <div class="overlay hidden"></div>
+      </div>
+    </div>
+    <script src="../js/index.js" type="module"></script>
+  </body>
+</html>

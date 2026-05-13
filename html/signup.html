@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - Bookmark Manager</title>
+    <link href="../css/index.css" rel="stylesheet" />
+    <link href="../css/register.css" rel="stylesheet" />
+    <link href="../img/Logo.svg" rel="icon" />
+  </head>
+  <body class="no-scrollbar">
+    <div class="overflow-wrapper">
+      <main class="container">
+        <a class="header-logo" href="/Bookmark_Manager">
+          <img src="../img/Logo.svg" />
+          <h1>
+            BookMark<span class="line-break"></span> Manager<span
+              class="small-text"
+              >.io</span
+            >
+          </h1>
+        </a>
+        <div class="data-container">
+          <div class="center">
+            <h2>Sign Up</h2>
+            <p class="data-desc">Join BookmarkManager.io</p>
+          </div>
+          <form id="registerForm">
+            <div class="input-fields">
+              <div class="input">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                />
+                <p id="error-email" class="error-text hidden">
+                  Email is already registered.
+                </p>
+              </div>
+              <div class="input">
+                <label for="pass">Password</label>
+                <input
+                  type="password"
+                  id="pass"
+                  name="password"
+                  placeholder="Enter your password"
+                  required
+                />
+              </div>
+            </div>
+            <button type="submit">Sign Up</button>
+          </form>
+          <div class="other-method">
+            <p>Already have an account?</p>
+            <a href="./signin.html">Sign In</a>
+          </div>
+        </div>
+        <a href="/Bookmark_Manager" class="go-back">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-move-left-icon lucide-move-left"
+          >
+            <path d="M6 8L2 12L6 16" />
+            <path d="M2 12H22" />
+          </svg>
+          <span>BookMarkManager.io</span>
+        </a>
+      </main>
+    </div>
+    <script>
+      document
+        .getElementById("registerForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const email = document.getElementById("email").value;
+          const pass = document.getElementById("pass").value;
+          const errorEmail = document.getElementById("error-email");
+
+          const formData = new FormData();
+          formData.append("email", email);
+          formData.append("password", pass);
+
+          fetch("../php/register.php", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.text())
+            .then((data) => {
+              if (data.trim() === "success") {
+                window.location.href = "../html/events.html";
+              } else if (data.trim() === "emailRegistered") {
+                errorEmail.classList.remove("hidden");
+              } else {
+                window.location.href = "../html/notFound.html";
+              }
+            });
+        });
+    </script>
+  </body>
+</html>
